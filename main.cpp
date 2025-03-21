@@ -1,6 +1,8 @@
 #include <iostream>
+#include <windows.h>
 #include <math.h>
 #include <vector>
+#include <unistd.h>
 using namespace std;
 
 int second()
@@ -249,35 +251,83 @@ int oifaqoraOxsayanBirsey()
 //     return 0;
 // }
 
-    int main()
+int main2()
+{
+    int x, y, t, z;
+    cin >> x;
+    vector<int> arr;
+    vector<int> arr2;
+    for (size_t i = 2; i <= x; i++)
     {
-        int x, y, t, z;
-        cin >> x;
-        vector<int> arr;
-        vector<int> arr2;
-        for (size_t i = 2; i <= x; i++)
+        if (i == 5 || i == 7 || i == 3)
         {
-            if (i == 5 || i == 7 || i == 3)
-            {
-                arr.push_back(i);
-            }
-
-            if (i != 2 && i != 3 && i != 5 && i != 7 && i % 2 != 0 && i % 3 != 0 && i % 5 != 0 && i % 7 != 0)
-            {
-                arr.push_back(i);
-            }
+            arr.push_back(i);
         }
 
-        for (int j = 0; j < arr.size() - 1; j++)
+        if (i != 2 && i != 3 && i != 5 && i != 7 && i % 2 != 0 && i % 3 != 0 && i % 5 != 0 && i % 7 != 0)
         {
-            if (arr[j] + 2 == arr[j + 1])
-            {
-                arr2.push_back(arr[j]);
-                arr2.push_back(arr[j + 1]);
-                cout << "(" << arr2[arr2.size() - 2] << ", " << arr2[arr2.size() - 1] << ")" << endl;
-            }
-            arr2.clear();
+            arr.push_back(i);
         }
-
-        return 0;
     }
+
+    for (int j = 0; j < arr.size() - 1; j++)
+    {
+        if (arr[j] + 2 == arr[j + 1])
+        {
+            arr2.push_back(arr[j]);
+            arr2.push_back(arr[j + 1]);
+            cout << "(" << arr2[arr2.size() - 2] << ", " << arr2[arr2.size() - 1] << ")" << endl;
+        }
+        arr2.clear();
+    }
+
+    return 0;
+}
+
+int kardesrakamlar()
+{
+    int start, end;
+    cout << "İki sayı girin: ";
+    cin >> start >> end;
+
+    cout << start << " ve " << end << " arasındaki kardeş rakamlar: \n";
+
+    for (int x = start; x <= end; x++)
+    {
+        int basketx = 0;
+        // x sayısının bölenlerinin toplamını hesapla
+        for (int i = 1; i < x; i++)
+        {
+            if (x % i == 0)
+            {
+                basketx += i;
+            }
+        }
+
+        if (basketx > x && basketx <= end) // Kardeş rakam olabilmesi için bölen toplamı büyük olmalı
+        {
+            int baskety = 0;
+            // basketx sayısının bölenlerinin toplamını hesapla
+            for (int j = 1; j < basketx; j++)
+            {
+                if (basketx % j == 0)
+                {
+                    baskety += j;
+                }
+            }
+
+            // Eğer kardeş rakamsalar, ekrana yazdır
+            if (baskety == x)
+            {
+                cout << x << " ve " << basketx << " kardeş rakamdır.\n";
+            }
+        }
+    }
+
+    return 0;
+}
+
+int main()
+{
+    return 0;
+}

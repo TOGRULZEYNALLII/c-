@@ -1,4 +1,14 @@
+#include <iostream>
+#include <windows.h> // Sleep fonksiyonu için
+using namespace std;
 
+void clearScreen()
+{
+    // Windows'ta ekranı temizlemek için
+    system("cls");
+}
+
+int main()
 {
     char donut1[] =
         "      ****      \n"
