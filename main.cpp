@@ -99,7 +99,7 @@ int birdenmineqederededler()
 
 int ekob()
 {
-    int x, y, t;
+    int x, y, t = 1;
     bool dogruluk = false;
 
     cin >> x >> y;
@@ -112,7 +112,7 @@ int ekob()
         t = y;
     }
 
-    for (size_t i = t; i <= 1e9; i++)
+    for (size_t i = t; i <= 100; i++)
 
     {
         if (i % x == 0 && i % y == 0)
@@ -327,27 +327,54 @@ int kardesrakamlar()
     return 0;
 }
 
+int ekobLCM1denneqeder()
+{
+    int x, lcm = 1;
+
+    cin >> x;
+    for (size_t j = 1; j <= x; j++)
+    {
+
+        for (size_t i = 1;; i++)
+
+        {
+            if (i % lcm == 0 && i % j == 0)
+            {
+                lcm = i;
+                break;
+            }
+            else
+            {
+                continue;
+            }
+            break;
+        }
+    }
+    cout << lcm << endl;
+
+    return 0;
+}
 int main()
 {
-    int N;
-    cout << "N sayisini gir: ";
-    cin >> N;
+    int x, basket = 0;
 
-    int lcm = 1; // LCM'i başta 1 olarak alıyoruz
-
-    // 1'den N'e kadar olan sayılar için LCM hesaplayacağız
-    for (int i = 2; i <= N; i++)
+    cin >> x;
+    for (size_t j = 1; j <= x; j++)
     {
-        int temp = lcm;
-        // Bu döngü ile lcm'yi ve i'yi karşılaştırıyoruz
-        while (temp % i != 0)
+        for (size_t i = 1; i < j; i++)
         {
-            temp += lcm; // Bir sonraki ortak katı bulana kadar lcm'yi artırıyoruz
+            if (j % i == 0)
+            {
+                basket += i;
+            }
         }
-        lcm = temp; // Sonucu lcm'ye kaydediyoruz
-    }
 
-    cout << "1'den " << N << " sayisina kadar olan sayilarin LCM'i: " << lcm << endl;
+        if (basket == j)
+        {
+            cout << basket << " ";
+        }
+        basket = 0;
+    }
 
     return 0;
 }
