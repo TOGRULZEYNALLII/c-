@@ -329,5 +329,25 @@ int kardesrakamlar()
 
 int main()
 {
+    int N;
+    cout << "N sayisini gir: ";
+    cin >> N;
+
+    int lcm = 1; // LCM'i başta 1 olarak alıyoruz
+
+    // 1'den N'e kadar olan sayılar için LCM hesaplayacağız
+    for (int i = 2; i <= N; i++)
+    {
+        int temp = lcm;
+        // Bu döngü ile lcm'yi ve i'yi karşılaştırıyoruz
+        while (temp % i != 0)
+        {
+            temp += lcm; // Bir sonraki ortak katı bulana kadar lcm'yi artırıyoruz
+        }
+        lcm = temp; // Sonucu lcm'ye kaydediyoruz
+    }
+
+    cout << "1'den " << N << " sayisina kadar olan sayilarin LCM'i: " << lcm << endl;
+
     return 0;
 }
