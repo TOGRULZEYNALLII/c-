@@ -8,8 +8,13 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
+<<<<<<< HEAD
       "cwd": "c:/Users/dragon/Desktop/c++/loops",
       "program": "c:/Users/dragon/Desktop/c++/loops/build/Debug/outDebug",
+=======
+      "cwd": "c:/Users/dragon/Desktop/c++/arrays",
+      "program": "c:/Users/dragon/Desktop/c++/arrays/build/Debug/outDebug",
+>>>>>>> 1cd8e30 (to 78)
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
