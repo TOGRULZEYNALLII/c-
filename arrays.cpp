@@ -191,7 +191,7 @@ int ArraydakiEnkicikVeenboyukElmentler()
     return 0;
 }
 
-int main()
+int Elementyerideyismek()
 {
     int x;
     cin >> x;
@@ -228,4 +228,121 @@ int main()
 
     return 0;
 }
-//yeniden baxildi
+
+// yeniden baxildi
+
+int tekrarmaxeded()
+{
+    int x;
+    cin >> x;
+    int arr[x];
+    int max = -10;
+    int count = 0;
+    int positionFirst = 0;
+    int positionLast = 0;
+    for (int i = 0; i < x; i++)
+    {
+        cin >> arr[i];
+    }
+    for (int i = 0; i < x; i++)
+    {
+        if (arr[i] > max)
+        {
+            max = arr[i];
+            count = 1;
+        }
+        else if (arr[i] == max)
+        {
+            count++;
+        }
+    }
+    for (int i = 0; i < x; i++)
+    {
+        if (arr[i] == max)
+        {
+            positionFirst = i;
+            break;
+        }
+    }
+    for (int i = 0; i < x; i++)
+    {
+        if (arr[i] == max)
+        {
+            positionLast = i;
+        }
+    }
+
+    cout << "The maximum element is: " << max << endl;
+    cout << "The number of occurrences of the maximum element is: " << count << endl;
+    cout << "The position of the first maximum element is: " << positionFirst << endl;
+    cout << "The position of the last maximum element is: " << positionLast << endl;
+
+    return 0;
+}
+
+int tekrarlananElementlersizsay()
+{
+    int x;
+    cin >> x;
+    int count = 0;
+    vector<int> arr2;
+    arr2.resize(x);
+    int arr[x];
+    for (int i = 0; i < x; i++)
+    {
+        cin >> arr[i];
+    }
+    for (int i = 0; i < x; i++)
+    {
+        for (int j = 0; j < i; j++)
+        {
+            if (arr[i] != arr[j])
+            {
+                arr2[count] = arr[i];
+                count++;
+            }
+        }
+    }
+    cout << "Distinct Elements: " << count << endl;
+    return 0;
+}
+
+int texmininMean()
+// texminin meana yaxin olmamasini yoxlayan proqram 
+
+{
+    int x;
+    cin>>x;
+    int arr[x];
+   
+    for (int i = 0; i < x; i++)
+    {
+        cin >> arr[i];
+    }
+    int texmin;
+    cin >> texmin;
+    int max=arr[x-1];
+    int min = arr[0];
+    int basket=0;
+    int mean=0;
+    for (int i = 0; i <x; i++)
+    {
+        basket+=arr[i];
+    }
+    mean = basket/(x-1);
+    if (texmin<=max && texmin>mean)
+    {
+        cout << "Maximum" << endl;
+    }
+    else if (texmin>=min && texmin<mean)
+    {
+        cout << "Minumum" << endl;
+    }
+    else if (texmin==mean)
+    {
+        cout << "Mean" << endl;
+    }
+    
+    
+    return 0;
+}
