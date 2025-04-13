@@ -280,7 +280,7 @@ int tekrarmaxeded()
     return 0;
 }
 
-int tekrarlananElementlersizsay()
+int tekrarlananElementlersizsay() // distinbct elementler
 {
     int x;
     cin >> x;
@@ -308,41 +308,329 @@ int tekrarlananElementlersizsay()
 }
 
 int texmininMean()
-// texminin meana yaxin olmamasini yoxlayan proqram 
+// texminin meana yaxin olmamasini yoxlayan proqram
 
 {
     int x;
-    cin>>x;
+    cin >> x;
     int arr[x];
-   
+
     for (int i = 0; i < x; i++)
     {
         cin >> arr[i];
     }
     int texmin;
     cin >> texmin;
-    int max=arr[x-1];
+    int max = arr[x - 1];
     int min = arr[0];
-    int basket=0;
-    int mean=0;
-    for (int i = 0; i <x; i++)
+    int basket = 0;
+    int mean = 0;
+    for (int i = 0; i < x; i++)
     {
-        basket+=arr[i];
+        basket += arr[i];
     }
-    mean = basket/(x-1);
-    if (texmin<=max && texmin>mean)
+    mean = basket / (x - 1);
+    if (texmin <= max && texmin > mean)
     {
         cout << "Maximum" << endl;
     }
-    else if (texmin>=min && texmin<mean)
+    else if (texmin >= min && texmin < mean)
     {
         cout << "Minumum" << endl;
     }
-    else if (texmin==mean)
+    else if (texmin == mean)
     {
         cout << "Mean" << endl;
     }
-    
-    
+
+    return 0;
+}
+
+int artansira94()
+{
+
+    int x;
+    cin >> x;
+    int arr[x];
+    int sort = -10;
+    for (int i = 0; i < x; i++)
+    {
+        cin >> arr[i];
+    }
+    for (int i = 0; i < x; i++)
+    {
+        for (int j = 0; j < x; j++)
+        {
+            if (arr[i] < arr[j])
+            {
+                sort = arr[j];
+                arr[j] = arr[i];
+                arr[i] = sort;
+                sort = -10;
+            }
+        }
+    }
+    for (int i = 0; i < x; i++)
+    {
+        cout << arr[i] << " ";
+    }
+    cout << endl;
+
+    return 0;
+}
+
+int main93()
+{
+    int x;
+    cin >> x;
+    int arr[x];
+    for (int i = 0; i < x; i++)
+    {
+        cin >> arr[i];
+    }
+    for (int i = 0; i < x; i++)
+    {
+        if (arr[i] > 0)
+        {
+            cout << arr[i] << " ";
+        }
+    }
+    for (int i = 0; i < x; i++)
+    {
+        if (arr[i] < 0)
+        {
+            cout << arr[i] << " ";
+        }
+    }
+
+    return 0;
+}
+
+int main92()
+{
+    int x;
+    cin >> x;
+    float arr[x];
+    float arr2[x];
+    for (int i = 0; i < x; i++)
+    {
+        cin >> arr[i];
+    }
+    arr2[0] = arr[0];
+    arr2[x - 1] = arr[x - 1];
+    for (int i = 1; i < x - 1; i++)
+    {
+        arr2[i] = (arr[i - 1] + arr[i + 1]) / 2;
+    }
+
+    for (int i = 0; i < x; i++)
+    {
+        cout << arr2[i] << " ";
+    }
+
+    return 0;
+}
+
+int main80()
+{
+    int x;
+    cin >> x;
+    int arr[x];
+    int count = 0;
+    bool dogruluk = false;
+    for (int i = 0; i < x; i++)
+    {
+        cin >> arr[i];
+    }
+    for (int i = 0; i < x; i++)
+    {
+    }
+
+    cout << "Occurrences of Subsequence: " << count << endl;
+    return 0;
+}
+
+int main81() // 81
+{
+    int n;
+    cin >> n;
+    int arr[n];
+
+    for (int i = 0; i < n; i++)
+    {
+        cin >> arr[i];
+    }
+
+    int count = 0;
+    int current = 1;
+
+    for (int i = 0; i < n; i++)
+    {
+        if (arr[i] == current)
+        {
+            current++;
+        }
+        else
+        {
+            current = 1;
+        }
+
+        if (current == 11)
+        {
+            count++;
+            current = 1;
+        }
+    }
+
+    cout << "Occurrences of Subsequence: " << count << endl;
+    return 0;
+}
+int main89() // 89
+{
+    int x;
+    cin >> x;
+    int arr[x];
+
+    for (int i = 0; i < x; i++)
+    {
+        cin >> arr[i];
+    }
+    int num;
+    cin >> num;
+
+    for (int i = 0; i < num - 1; i++)
+    {
+        cout << arr[i] << " ";
+    }
+    for (int i = x - 1; i >= num; i--)
+    {
+        cout << arr[i] << " ";
+    }
+    return 0;
+}
+int main90()
+{ // 90
+
+    int x;
+    cin >> x;
+    int arr[x];
+
+    for (int i = 0; i < x; i++)
+    {
+        cin >> arr[i];
+    }
+    int num;
+    cin >> num;
+    int last;
+    cin >> last;
+
+    for (int i = 0; i < num; i++)
+    {
+        cout << arr[i] << " ";
+    }
+
+    return 0;
+}
+
+int main78t()
+{
+    int x;
+    cin >> x;
+    int arr[x];
+    int arr2[x];
+    int count[x] = {0};
+    int mincount = 0;
+    int maxcount = 0;
+
+    for (int i = 0; i < x; i++)
+    {
+        cin >> arr[i];
+    }
+
+    for (int i = 0; i < x; i++)
+    {
+        for (int j = 0; j < x; j++)
+        {
+            if (arr[i] == arr[j])
+            {
+                count[i]++;
+            }
+        }
+    }
+
+    int index = 0;
+    for (int i = 0; i < x; i++)
+    {
+        if (count[i] == 1)
+        {
+            arr2[index] = arr[i];
+            index++;
+        }
+    }
+
+    for (int i = 1; i < index - 1; i++)
+    {
+        if (arr2[i] > (arr2[i - 1] + arr2[i + 1]) / 2)
+        {
+            maxcount++;
+        }
+        else if (arr2[i] < (arr2[i - 1] + arr2[i + 1]) / 2)
+        {
+            mincount++;
+        }
+    }
+
+    cout << "Local Minima: " << mincount << endl;
+    cout << "Local Maxima: " << maxcount << endl;
+
+    return 0;
+}
+
+int main()
+{
+    int x;
+    cin >> x;
+    int arr[x];
+    float arr2[x];
+    int index = 0;
+
+    for (int i = 0; i < x; i++)
+    {
+        cin >> arr[i];
+    }
+
+    for (int i = 0; i < x; i++)
+    {
+        bool tekrarVar = false;
+
+        for (int j = 0; j < index; j++)
+        {
+            if (arr[i] == arr2[j])
+            {
+                tekrarVar = true;
+            }
+        }
+
+        if (!tekrarVar)
+        {
+            arr2[index++] = arr[i];
+        }
+    }
+    int maxcount=0;
+    int mincount=0;
+    for (int i = 1; i < index - 1; i++)
+    {
+        if (arr2[i] > (arr2[i - 1] + arr2[i + 1]) / 2)
+        {
+            maxcount++;
+        }
+        else if (arr2[i] < (arr2[i - 1] + arr2[i + 1]) / 2)
+        {
+            mincount++;
+        }
+    }
+
+    cout << "Local Minima: " << mincount << endl;
+    cout << "Local Maxima: " << maxcount << endl;
     return 0;
 }
