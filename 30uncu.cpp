@@ -3,6 +3,7 @@
 #include <cstdio>
 #include <vector>
 #include <algorithm>
+//degisiklik
 using namespace std;
 int main()
 {
