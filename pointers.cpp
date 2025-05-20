@@ -25,3 +25,7 @@ int main()
 
     return 0;
 }
+
+// This code demonstrates the use of pointers in C++.
+// It declares two integer variables, a and b, and initializes them.
+// It then creates two pointers, p1 and p2, that point to the addresses of a and b respectively.
