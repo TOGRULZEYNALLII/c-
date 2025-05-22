@@ -1,6 +1,7 @@
 #include <iostream>
 #include <cstring>
 #include <string.h>
+#include <algorithm>
 using namespace std;
 
 // int Stirngitersinecevir() {
@@ -127,14 +128,82 @@ using namespace std;
   // }
   // // test
 
-//   //  includes e oxsuyan sey sehv 
 
 
-int main(){
-  string s;
-  getline(cin, s);
-  string word="";
-  }
-  cout << word << endl;
-  return 0;
-}
+// stringi alfabetic duzme 
+// int main(){
+//   string s;
+//   getline(cin, s);
+//   string word="";
+//   for(int i=0;i<s.length();i++){
+//     if(s[i] >= 'A' && s[i] <= 'Z' || s[i] >= 'a' && s[i] <= 'z'){
+//         word += s[i];
+//     }
+//   }
+//   sort(word.begin(), word.end());
+//   cout << word << endl;
+//   return 0;
+// }
+
+// Count Vowels in a String
+
+// int main (){
+//   string s;
+//   getline(cin,s);
+//   int count=0;
+//   for(int i=0;i<s.length();i++){
+//     if(s[i] == 'a' || s[i] == 'e' || s[i] == 'i' || s[i] == 'o' || s[i] == 'u' || s[i] == 'A' || s[i] == 'E' || s[i] == 'I' || s[i] == 'O' || s[i] == 'U'){
+//       count++;
+//     }
+//   }
+//   cout <<"number of vowels -> "<< count << endl;
+//   return 0;
+// }
+
+
+//  Insert Dash Between Odds
+// int main(){
+//   string s;
+//   getline(cin, s);
+//   for(int i=0;i<s.length();i++){
+//     cout<<s[i];
+//     if(i<s.size()-1){
+//      if((s[i] == '1' || s[i] == '3' || s[i] == '5' || s[i] == '7' || s[i] == '9') &&
+//          (s[i+1] == '1' || s[i+1] == '3' || s[i+1] == '5' || s[i+1] == '7' || s[i+1] == '9') &&
+//          s[i] != s[i+1]){
+//         cout << "-";
+//       }
+//     }
+//   }
+//   return 0;
+// }
+
+
+//  array icnde includes
+// int main(){
+//     string s;
+//     getline(cin, s);  
+//     string t;
+//     getline(cin, t);
+
+//     bool found = false;
+
+//     for (int i = 0; i < t.length(); i++) {
+//         for (int j = 0; j < s.length(); j++) {
+//             if (t[i] == s[j] || t[i] != s[j] + 32) {
+
+//                 found = true;  
+//                 break;
+//             }
+//         }
+//         if (found) break;
+//     }
+
+//     if (found)
+//         cout << "true"  ;
+//     else
+//         cout << "false";
+
+
+//     return 0;
+// }
