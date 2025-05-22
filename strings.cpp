@@ -180,30 +180,69 @@ using namespace std;
 
 
 //  array icnde includes
-// int main(){
+// #include <iostream>
+// #include <string>
+// using namespace std;
+
+// int main() {
 //     string s;
 //     getline(cin, s);  
 //     string t;
 //     getline(cin, t);
 
-//     bool found = false;
+//     bool allFound = true;
 
 //     for (int i = 0; i < t.length(); i++) {
+//         bool found = false;
 //         for (int j = 0; j < s.length(); j++) {
-//             if (t[i] == s[j] || t[i] != s[j] + 32) {
-
-//                 found = true;  
+//             if (t[i] == s[j]) {
+//                 found = true;
 //                 break;
 //             }
 //         }
-//         if (found) break;
+//         if (!found) {
+//             allFound = false;
+//             break;
+//         }
 //     }
 
-//     if (found)
-//         cout << "true"  ;
+//     if (allFound)
+//         cout << "true";
 //     else
 //         cout << "false";
 
-
 //     return 0;
 // }
+
+
+
+
+// String Compression
+
+//  to be continue...
+int main(){
+  string s;
+  getline(cin, s);
+  string word="";
+    int counta=0;
+  int countb=0;
+  int countc=0;
+  for(int i=0;i<s.length();i++){
+    if(s[i]=='a' ){
+      counta++;
+    }else if(s[i]=='b'){
+      countb++;
+    }else if(s[i]=='c'){
+      countc++;
+    }
+  }
+  word += 'a'+ to_string(counta);
+  word += 'b'+ to_string(countb);
+  word += 'c'+ to_string(countc);
+
+  cout << word << endl;
+  return 0;
+}
+
+
+
