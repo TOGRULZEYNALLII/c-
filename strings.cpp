@@ -107,21 +107,34 @@ using namespace std;
   // }
 
 
-  // remove special characters  sehv
-  int main (){
+  // remove special characters  
+  // int main (){
 
-    string s;
-    getline(cin, s);
-    string word="";
-    for(int i=0;i<s.length();i++){
-      if((s[i] >= 'a' && s[i] <= 'z') || (s[i] >= 'A' && s[i] <= 'Z') || (s[i] >= '0' && s[i] <= '9')){
-        word += s[i];
-      }else{
-        word += ' ';
-      }
-    }
-    cout << word << endl;
-    return 0;
+  //   string s;
+  //   getline(cin, s);
+  //   string word="";
+  //   for(int i=0;i<s.length();i++){
+  //     if((s[i] >= 'a' && s[i] <= 'z') || (s[i] >= 'A' && s[i] <= 'Z') || (s[i] >= '0' && s[i] <= '9')){
+  //       word += s[i];
+  //     }else if(s[i] == ' '){
+  //       word += ' ';
+  //     }else if(s[i] == '\n'){
+  //       word += '\n';
+  //     }
+  //   }
+  //   cout << word << endl;
+  //   return 0;
+  // }
+  // // test
+
+//   //  includes e oxsuyan sey sehv 
+
+
+int main(){
+  string s;
+  getline(cin, s);
+  string word="";
   }
-
-  // test  
+  cout << word << endl;
+  return 0;
+}
