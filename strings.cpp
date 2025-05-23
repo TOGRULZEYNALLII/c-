@@ -219,30 +219,26 @@ using namespace std;
 
 // String Compression
 
-//  to be continue...
-int main(){
-  string s;
-  getline(cin, s);
-  string word="";
-    int counta=0;
-  int countb=0;
-  int countc=0;
-  for(int i=0;i<s.length();i++){
-    if(s[i]=='a' ){
-      counta++;
-    }else if(s[i]=='b'){
-      countb++;
-    }else if(s[i]=='c'){
-      countc++;
-    }
-  }
-  word += 'a'+ to_string(counta);
-  word += 'b'+ to_string(countb);
-  word += 'c'+ to_string(countc);
+// int main(){
+//   string s;
+//   getline(cin, s);
+//   string word="";
+//   int count=1;
+//   for(int i=1;i<=s.length();i++){
+//     if(s[i]==s[i-1]){
+//       count++;
+//     }else{
+//       word+=s[i-1];
+//       word += to_string(count);
+//       count=1;
 
-  cout << word << endl;
-  return 0;
-}
+//     }
+//   }
+
+
+//   cout << word << endl;
+//   return 0;
+// }
 
 
 
