@@ -138,21 +138,246 @@ using namespace std;
 
 
 
-void arra(int x, int y, int z, int t) {
-    int basket = 0;
-    basket += x;
-    basket += y;
-    basket += z;
-    basket += t;
-    cout << basket;
+// void arra(int x, int y, int z, int t) {
+//     int basket = 0;
+//     basket += x;
+//     basket += y;
+//     basket += z;
+//     basket += t;
+//     cout << basket;
+// }
+
+// int main() {
+//     int x,y,z,t;
+//     cin >> x >> y >> z >> t;
+
+
+//     arra(x,y,z,t);
+
+//     return 0;
+// }
+// A message indicating the binary value of the entered decimal number.
+// void decimalToBinary(int decimal) {
+//     if (decimal == 0) {
+//         cout << "0";
+//         return;
+//     }
+//     string binary = "";
+//     while (decimal > 0) {
+//         binary = to_string(decimal % 2) + binary;
+//         decimal /= 2;
+//     }
+//     cout << "The binary value is: " << binary << endl;
+// }
+
+// int main (){
+//     int decimal;
+//     cin >> decimal;
+//     decimalToBinary(decimal);
+//     return 0;
+// }
+
+
+// The sum of the series with an appropriate message
+// void sumOfSeries(int n) {
+//     int sum = 0;
+//     for (int i = 1; i <= n; i++) {
+//         int factorial = 1;
+//         for (int j = 1; j <= i; j++) {
+//             factorial *= j;
+//         }
+//         sum += factorial/i;
+//     }
+//     cout<<sum << endl;
+// }
+// int main() {
+//     int n;
+//     cin >> n;
+//     sumOfSeries(n);
+//     return 0;
+// }
+
+// A message indicating the largest element in the array.
+// void findLargestElement(int arr[], int size) {
+//     int largest = arr[0];
+//     for (int i = 1; i < size; i++) {
+//         if (arr[i] > largest) {
+//             largest = arr[i];
+//         }
+//     }
+//     cout << largest << endl;
+// }
+// int main() {
+//     int x;
+//     cin >> x;
+//     int arr[x];
+//     for (int i = 0; i < x; i++) {
+//         cin >> arr[i];
+//     }
+//     findLargestElement(arr,x);
+//     return 0;
+// }
+
+// armstong number checker
+
+// void isArmstrong(int num) {
+//     int originalNum = num;
+//     int sum = 0;
+//     int digits = 0;
+
+//     // Count the number of digits
+//     while (num > 0) {
+//         num /= 10;
+//         digits++;
+//     }
+
+//     num = originalNum;
+
+//     // Calculate the sum of the cubes of the digits
+//     while (num > 0) {
+//         int digit = num % 10;
+//         sum += pow(digit, digits);
+//         num /= 10;
+//     }
+
+//     if (sum == originalNum) {
+//         cout <<"The "<< originalNum << " is an Armstrong number." << endl;
+//     } else {
+//         cout << "The " << originalNum << " is not an Armstrong number." << endl;
+//     }
+// }
+// void isPerfect(int num) {
+//     int sum = 0;
+//     for (int i = 1; i < num; i++) {
+//         if (num % i == 0) {
+//             sum += i;
+//         }
+//     }
+//     if (sum == num) {
+//         cout<<"The " << num << " is a perfect number." << endl;
+//     } else {
+//         cout << "The " << num << " is not a perfect number." << endl;
+//     }
+// }
+// int main() {
+//     int num;
+//     cout << "Enter a number: ";
+//     cin >> num;
+//     isArmstrong(num);
+//     isPerfect(num);
+//     return 0;
+// }
+
+// A message indicating the perfect numbers within the specified range.
+
+// void findPerfectNumbers(int start, int end) {
+//     cout << "Perfect numbers between " << start << " to " << end << " are: ";
+//     for (int num = start; num <= end; num++) {
+//         int sum = 0;
+//         for (int i = 1; i < num; i++) {
+//             if (num % i == 0) {
+//                 sum += i;
+//             }
+//         }
+//         if (sum == num) {
+//             cout << num << " ";
+//         }
+//     }
+//     cout << endl;
+// }
+// int main() {
+//     int start, end;
+//     cin >> start >> end;
+//     findPerfectNumbers(start, end);
+//     return 0;
+// }
+
+
+// string anagram checker 
+
+
+// Sum Function with Default Arguments 
+// #include <iostream>
+// using namespace std;
+
+// // Fonksiyon tanımı: 2 zorunlu, 2 opsiyonel parametre
+// int sum(int a, int b, int c = 0, int d = 0) {
+//     return a + b + c + d;
+// }
+
+// int main() {
+//     // Örnek girişler:
+//     int x, y, c, w;
+//     cin >> x >> y >> c >> w;
+//     cout << sum(x, y, c, w) << endl; // Output: 0 (default values used)
+//     return 0;
+// }
+
+// Write three C++ functions: convertToHex, convertToBinary, and convertToOctal. Each function should take an integer as input and return a string representing the number in hexadecimal, binary, and octal formats, respectively.
+// void convertToHex(int num) {
+//     cout << "Hex: " << uppercase << hex << num << endl;
+// }
+// void convertToBinary(int num) {
+//     string binary = "";
+//     if(num == 0) {
+//         binary = "0";
+//     }else{
+//         while (num > 0) {
+//             binary = to_string(num % 2) + binary;
+//             num /= 2;
+//         }
+//     }
+//     cout << "Bin: " << binary << endl;
+// }
+// void convertToOctal(int num) {
+//     cout << "Oct: " << oct << num << endl;
+// }
+// int main() {
+//     int num;
+//     cin >> num;
+//  convertToBinary(num);
+//     convertToHex(num);
+   
+//     convertToOctal(num);
+
+//     return 0;
+// }
+
+// string convertTo(int num, const string& format = "dec");
+void convertToHex(int num) {
+    cout << uppercase << hex << num << endl;
 }
-
+void convertToBinary(int num) {
+    string binary = "";
+    if(num == 0) {
+        binary = "0";
+    }else{
+        while (num > 0) {
+            binary = to_string(num % 2) + binary;
+            num /= 2;
+        }
+    }
+    cout << binary << endl;
+}
+void convertToOctal(int num) {
+    cout <<  oct << num << endl;
+}
 int main() {
-    int x,y,z,t;
-    cin >> x >> y >> z >> t;
+    int num;
+    string format;
+    cin >> num;
+    cin >> format;
 
-
-    arra(x,y,z,t);
+    if(format=="hex") {
+        convertToHex(num);
+    } else if(format=="bin") {
+        convertToBinary(num);
+    } else if(format=="oct") {
+        convertToOctal(num);
+    } else {
+        cout << "Invalid format specified." << endl;
+        return 1; // Exit with an error code
+    }
 
     return 0;
 }
