@@ -13,6 +13,7 @@ int ArrminEachCol(){
             cin>> matrix[i][j];
         }
     }
+    // Her sira ucun min elementi tapmaq
 
     int x = 0;
     for(int i = 0; i < n; i++){
