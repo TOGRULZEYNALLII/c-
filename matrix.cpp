@@ -260,4 +260,144 @@ int rowszerocount (){
     return 0;
 }
 
-// salam 
+// salam
+int fillmatrix()
+{
+    int matrix[5][6] = {
+        {1, 2, 3, 4, 5, 6},
+        {12, 11, 10, 9, 8, 7},
+        {13, 14, 15, 16, 17, 18},
+        {24, 23, 22, 21, 20, 19},
+        {25, 26, 27, 28, 29, 30}};
+    for (int i = 0; i < 5; i++)
+    {
+        for (int j = 0; j < 6; j++)
+        {
+            cout << matrix[i][j] << " ";
+        }
+        cout << endl;
+    }
+
+    return 0;
+}
+
+int fillmatrix2()
+{
+    //     1  2  3  4  5  6
+    // 7  8  9  10 11 12
+    // 13 14 15 16 17 18
+    // 19 20 21 22 23 24
+    // 25 26 27 28 29 30
+    int matrix[5][6] = {
+        {1, 2, 3, 4, 5, 6},
+        {7, 8, 9, 10, 11, 12},
+        {13, 14, 15, 16, 17, 18},
+        {19, 20, 21, 22, 23, 24},
+        {25, 26, 27, 28, 29, 30}};
+    for (int i = 0; i < 5; i++)
+    {
+        for (int j = 0; j < 6; j++)
+        {
+            cout << matrix[i][j] << " ";
+        }
+        cout << endl;
+    }
+    return 0;
+}
+
+int yadmnancixdiadi()
+{
+    int n;
+    cin >> n;
+    int matrix[n][n];
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < n; j++)
+        {
+            cin >> matrix[i][j];
+        }
+    }
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < n; j++)
+        {
+            if (matrix[i][j] == matrix[i][j + 1] && j < n - 1)
+            {
+                cout << i + 1 << " ";
+            }
+            break;
+        }
+    }
+    return 0;
+}
+
+int maxminnewarr()
+{
+    int n, m;
+    cin >> n >> m;
+    int matrix[n][m];
+    int pushedarray[m]; // sütun sayısı kadar fark tutacağız
+
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < m; j++)
+        {
+            cin >> matrix[i][j];
+        }
+    }
+
+    for (int j = 0; j < m; j++)
+    {
+        int maxVal = matrix[0][j];
+        int minVal = matrix[0][j];
+
+        for (int i = 1; i < n; i++)
+        {
+            if (matrix[i][j] > maxVal)
+                maxVal = matrix[i][j];
+            if (matrix[i][j] < minVal)
+                minVal = matrix[i][j];
+        }
+
+        pushedarray[j] = maxVal - minVal;
+    }
+
+    for (int i = 0; i < m; i++)
+    {
+        cout << pushedarray[i] << " ";
+    }
+
+    return 0;
+}
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int n;
+    cin >> n;
+    int matrix[n][n];
+
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < n; j++)
+        {
+            cin >> matrix[i][j];
+        }
+    }
+
+    for (int j = 0; j < n; j++)
+    {
+        for (int i = 0, l = n - 1; i < l; i++, l--)
+        {
+            if (matrix[i][j] == matrix[l][j])
+            {
+                cout << j + 1 << " ";
+                return 0;
+            }
+        }
+    }
+
+    return 0;
+}
