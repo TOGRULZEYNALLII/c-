@@ -947,3 +947,4 @@ using namespace std;
 //     }
 //     return 0;
 // }
+// 4 complex question waiting all other done 
