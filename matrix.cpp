@@ -1,9 +1,8 @@
 // #include<iostream>
 
-
 // using namespace std;
 
-// // arraydaki her sirada minum elementi tapmaq  
+// // arraydaki her sirada minum elementi tapmaq
 // int ArrminEachCol(){
 //     int n, m;
 //     cin>> n >> m;
@@ -17,11 +16,11 @@
 
 //     int x = 0;
 //     for(int i = 0; i < n; i++){
-//         int min=100; 
+//         int min=100;
 //         for (int j = 0; j < m; j++){
 //             if (matrix[i][j] < min && x == i)  {
 //                 min = matrix[i][j];
-               
+
 //            }
 //         }
 //         x++;
@@ -31,8 +30,7 @@
 //     return 0;
 // }
 
-
-// // arraydaki her --> sutunda<-- min elementi tapmaq 
+// // arraydaki her --> sutunda<-- min elementi tapmaq
 // int minElementEachRow(){
 //    int n, m;
 //    cin>> n >> m;
@@ -56,7 +54,7 @@
 //     return 0;
 // }
 
-// //column sum to array 
+// //column sum to array
 
 // int columnSum(){
 //     int n , m;
@@ -104,7 +102,7 @@
 //         cout << basket << " ";
 //     }
 // }
-
+// test for 10 th and graduation from algotrim
 // // Row Product to Array
 // int rowProduct(){
 //     int n, m;
@@ -165,7 +163,7 @@
 //     return 0;
 // }
 
-// // Diagonal and Above Zeroing 
+// // Diagonal and Above Zeroing
 // int diagonalAndAboveZeroing(){
 //     int n;
 //     cin >> n;
@@ -194,7 +192,7 @@
 // }
 
 // // Count Unique Elements
-// //  FALSE 
+// //  FALSE
 // // int  main(){
 // //     int n,m;
 // //     cin >> n >> m;
@@ -245,7 +243,7 @@
 //         bool isZeroRow = true;
 //         for (int j = 0; j < n; j++)
 //         {
-            
+
 //             if (matrix[i][j] != 0)
 //             {
 //                 isZeroRow = false;
@@ -416,7 +414,6 @@ using namespace std;
 //         }
 //     }
 
-    
 //     for(int i = 0; i < x; i++){
 //         string z="";
 //         string y="";
@@ -437,37 +434,37 @@ using namespace std;
 // }
 
 //    Average of Extreme Values
-    // #include <iomanip>
-    // int main() { 
-    //     int n, m;
-    //     cin >> n >> m;
+// #include <iomanip>
+// int main() {
+//     int n, m;
+//     cin >> n >> m;
 
-    //     double matrix[n][m];
+//     double matrix[n][m];
 
-    //     for (int i = 0; i < n; i++) {
-    //         for (int j = 0; j < m; j++) {
-    //             cin >> matrix[i][j];
-    //         }
-    //     }
+//     for (int i = 0; i < n; i++) {
+//         for (int j = 0; j < m; j++) {
+//             cin >> matrix[i][j];
+//         }
+//     }
 
-    //     double max = matrix[0][0];
-    //     double min = matrix[0][0];
+//     double max = matrix[0][0];
+//     double min = matrix[0][0];
 
-    //     for (int i = 0; i < n; i++) {
-    //         for (int j = 0; j < m; j++) {
-    //             if (matrix[i][j] > max) max = matrix[i][j];
-    //             if (matrix[i][j] < min) min = matrix[i][j];
-    //         }
-    //     }
+//     for (int i = 0; i < n; i++) {
+//         for (int j = 0; j < m; j++) {
+//             if (matrix[i][j] > max) max = matrix[i][j];
+//             if (matrix[i][j] < min) min = matrix[i][j];
+//         }
+//     }
 
-    //     double average = (max + min) / 2.0;
+//     double average = (max + min) / 2.0;
 
-    //     cout << fixed << setprecision(2) << average << endl;
+//     cout << fixed << setprecision(2) << average << endl;
 
-    //     return 0;
-    // }
-// swap max min elemnts rows 
-// int main() { 
+//     return 0;
+// }
+// swap max min elemnts rows
+// int main() {
 //     int n, m;
 //     cin >> n >> m;
 
@@ -518,12 +515,12 @@ using namespace std;
 //     int n, m;
 //     cin >> n >> m;
 //     int matrix[n][m];
-//     int arrunique[n * m]; 
+//     int arrunique[n * m];
 //     for (int i = 0; i < n; i++) {
 //         for (int j = 0; j < m; j++) {
 //             cin >> matrix[i][j];
 //         }
-//     }   
+//     }
 
 //     int k = 0;
 //     for (int i = 0; i < n; i++) {
@@ -546,7 +543,6 @@ using namespace std;
 //     return 0;
 // }
 
-
 // #include <iostream>
 // using namespace std;
 
@@ -562,7 +558,6 @@ using namespace std;
 //         }
 //     }
 
-
 //     for (int i = 0; i < n; i++) {
 
 //             bool isIncreasing = true;
@@ -570,7 +565,7 @@ using namespace std;
 //         for (int j = 0; j < n - 1; j++) {
 //             if (matrix[i][j] <= matrix[i][j+1]) {
 //                 isIncreasing = false;
-                
+
 //             }
 //             if (matrix[i][j] >= matrix[i][j+1] ) {
 //                 isDecreasing = false;
@@ -582,7 +577,6 @@ using namespace std;
 
 //     return 0;
 // }
-
 
 // int main(){
 //     int n,m;
@@ -608,11 +602,8 @@ using namespace std;
 //         cout << endl;
 //     }
 
-
 //     return 0;
 // }
-
-
 
 // int main(){
 //     int arr[30] = {  1,  3,  4,  10, 11, 20,
@@ -622,7 +613,7 @@ using namespace std;
 //                        15, 16, 24, 25, 29, 30
 //                    };
 
-//     int matrix[5][6]; 
+//     int matrix[5][6];
 //     for(int i = 0; i < 5; i++){
 //         for(int j = 0; j < 6; j++){
 //             matrix[i][j] = arr[i * 6 + j];
@@ -634,9 +625,6 @@ using namespace std;
 //         }
 //         cout << endl;
 //     }
-
-
-
 
 //     return 0;
 
@@ -652,7 +640,7 @@ using namespace std;
 //                    37 ,36 ,35 ,34 ,33 ,32 ,31
 //                    };
 
-//     int matrix[7][7]; 
+//     int matrix[7][7];
 //     for(int i = 0; i < 7; i++){
 //         for(int j = 0; j < 7; j++){
 //             matrix[i][j] = arr[i * 7 + j];
@@ -664,9 +652,6 @@ using namespace std;
 //         }
 //         cout << endl;
 //     }
-
-
-
 
 //     return 0;
 
@@ -690,13 +675,12 @@ using namespace std;
 
 //        }
 //          cout << endl;
-       
+
 //     }
-    
 
 //    return 0;
 // }
-// mirrot vertically 
+// mirrot vertically
 // int main (){
 //     int n;
 //     cin >> n;
@@ -714,9 +698,9 @@ using namespace std;
 
 //        }
 //          cout << endl;
-       
+
 //     }
-    
+
 //     return 0;
 // }
 
@@ -738,31 +722,30 @@ using namespace std;
 //        }
 //        cout << endl;
 //     }
-    //     return 0;
-    // }
+//     return 0;
+// }
 
+// mirror matrix diagonally secondary
+// int main(){
+//     int n;
+//     cin >> n;
+//     int matrix[n][n];
+//     for(int i = 0; i < n; i++){
+//         for(int j = 0; j < n; j++){
+//             cin >> matrix[i][j];
+//         }
+//     }
+//     for (int i = n-1; i >= 0; i--)
+//     {
+//        for (int j = n-1; j >= 0; j--)
+//        {
+//            cout << matrix[j][i] << " ";
+//        }
+//        cout << endl;
+//     }
+//     return 0;
+// }
 
-    // mirror matrix diagonally secondary 
-    // int main(){
-    //     int n;
-    //     cin >> n;
-    //     int matrix[n][n];
-    //     for(int i = 0; i < n; i++){
-    //         for(int j = 0; j < n; j++){
-    //             cin >> matrix[i][j];
-    //         }
-    //     }
-    //     for (int i = n-1; i >= 0; i--)
-    //     {
-    //        for (int j = n-1; j >= 0; j--)
-    //        {
-    //            cout << matrix[j][i] << " ";
-    //        }
-    //        cout << endl;
-    //     }
-    //     return 0;
-    // }
-    
 // Rotate Matrix in Positive Directions
 
 //     int main(){
@@ -807,7 +790,7 @@ using namespace std;
 //     return 0;
 // }
 
-// Replace Elements Above and Below Main Diagonal 
+// Replace Elements Above and Below Main Diagonal
 
 // int main(){
 //     int n;
@@ -842,7 +825,7 @@ using namespace std;
 //         {
 //             cout << matrix[i][j] << " ";
 //         }
-//         cout << endl;   
+//         cout << endl;
 //     }
 //     for (int i = 0; i < n; i++)
 //     {
@@ -862,14 +845,13 @@ using namespace std;
 //         {
 //             cout  << orginalmatrix[i][j] << " ";
 //         }
-//         cout << endl;   
+//         cout << endl;
 //     }
-
 
 //     return 0;
 // }
 
-// Swap Columns with Minimum and Maximum Elements 
+// Swap Columns with Minimum and Maximum Elements
 
 // int main(){
 //     int n,m;
@@ -877,7 +859,7 @@ using namespace std;
 //     int matrix[n][m];
 //     for(int i = 0; i < n; i++){
 //         for(int j = 0; j < m; j++){
-//             cin >> matrix[i][j]; 
+//             cin >> matrix[i][j];
 //         }
 //     }
 //     for (int i = 0; i < n; i++)
@@ -886,7 +868,7 @@ using namespace std;
 //         for (int j = 1; j < m; j++)
 //         {
 //             if (matrix[i][j] < matrix[i][minCol])
-//                 minCol = j; 
+//                 minCol = j;
 //             if (matrix[i][j] > matrix[i][maxCol])
 //                 maxCol = j;
 //         }
@@ -907,7 +889,7 @@ using namespace std;
 //     return 0;
 // }
 
-///test 
+/// test
 // int main(){
 //     int n;
 //     cin >> n;
@@ -916,54 +898,52 @@ using namespace std;
 //         for(int j = 0; j < n; j++){
 //             cin >> matrix[i][j];
 
-
 //         }//     }
 //     for (int i = 0; i < n; i++)
 //     {
 //         for (int j = 0; j < n; j++)
 
-
-
-int main (){
+int main()
+{
     int n;
-    cin >> n ;
+    cin >> n;
     int matrix[n][n];
-    for(int i = 0; i < n; i++){
-        for(int j = 0; j < n; j++){
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < n; j++)
+        {
             cin >> matrix[i][j];
         }
     }
 
     for (int i = 0; i < n; i++)
     {
-        
+
         int arr[n];
         for (int j = 0; j < n; j++)
         {
             arr[j] = matrix[j][i];
         }
         int reversearr[n];
-        
 
-        for (int j = n-1; j >= 0; j--)
+        for (int j = n - 1; j >= 0; j--)
         {
             reversearr[j] = arr[n - j - 1];
-        } 
-            bool isEqual = true;
-       for (int i = 0; i < n; i++)
-       {
+        }
+        bool isEqual = true;
+        for (int i = 0; i < n; i++)
+        {
 
-
-           if (arr[i] != reversearr[i])
-           {
+            if (arr[i] != reversearr[i])
+            {
                 isEqual = false;
-           }
-       }
+            }
+        }
 
-       if (isEqual)
-       {
-           cout << i + 1 << " ";
-       }
+        if (isEqual)
+        {
+            cout << i + 1 << " ";
+        }
     }
     return 0;
 }
