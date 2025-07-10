@@ -903,47 +903,47 @@ using namespace std;
 //     {
 //         for (int j = 0; j < n; j++)
 
-int main()
-{
-    int n;
-    cin >> n;
-    int matrix[n][n];
-    for (int i = 0; i < n; i++)
-    {
-        for (int j = 0; j < n; j++)
-        {
-            cin >> matrix[i][j];
-        }
-    }
+// int main()
+// {
+//     int n;
+//     cin >> n;
+//     int matrix[n][n];
+//     for (int i = 0; i < n; i++)
+//     {
+//         for (int j = 0; j < n; j++)
+//         {
+//             cin >> matrix[i][j];
+//         }
+//     }
 
-    for (int i = 0; i < n; i++)
-    {
+//     for (int i = 0; i < n; i++)
+//     {
 
-        int arr[n];
-        for (int j = 0; j < n; j++)
-        {
-            arr[j] = matrix[j][i];
-        }
-        int reversearr[n];
+//         int arr[n];
+//         for (int j = 0; j < n; j++)
+//         {
+//             arr[j] = matrix[j][i];
+//         }
+//         int reversearr[n];
 
-        for (int j = n - 1; j >= 0; j--)
-        {
-            reversearr[j] = arr[n - j - 1];
-        }
-        bool isEqual = true;
-        for (int i = 0; i < n; i++)
-        {
+//         for (int j = n - 1; j >= 0; j--)
+//         {
+//             reversearr[j] = arr[n - j - 1];
+//         }
+//         bool isEqual = true;
+//         for (int i = 0; i < n; i++)
+//         {
 
-            if (arr[i] != reversearr[i])
-            {
-                isEqual = false;
-            }
-        }
+//             if (arr[i] != reversearr[i])
+//             {
+//                 isEqual = false;
+//             }
+//         }
 
-        if (isEqual)
-        {
-            cout << i + 1 << " ";
-        }
-    }
-    return 0;
-}
+//         if (isEqual)
+//         {
+//             cout << i + 1 << " ";
+//         }
+//     }
+//     return 0;
+// }
