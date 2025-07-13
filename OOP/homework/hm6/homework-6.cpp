@@ -1,6 +1,6 @@
 
 #include <iostream>
-
+#include <limits>
 using namespace std;
 
 /*
@@ -39,24 +39,63 @@ using namespace std;
 /* Solution */
 
 class Book {
-    // TODO:
+   private :
+    string title;
+    string author;
+    int year;
+    public:
+    // Default constructor
+    Book() : title(""), author(""), year(0) {}
+    Book(const string &title, const string &author, int year) {
+        this->title = title;
+        this->author = author;
+        this->year = year;
+    }
+
+    // Member function to display book details
+    void display() const {
+        cout << "Title: " << title << endl;
+        cout << "Author: " << author << endl;
+        cout << "Year: " << year << endl;
+    }
+
 };
 
 
 int main() {
 
-    const int librarySize = 5;
+    const int librarySize = 2;
     Book library[librarySize];
 
     cout << "Enter details for " << librarySize << " books:" << endl;
     for (int i = 0; i < librarySize; ++i) {
-        // TODO: 
+        string title, author;
+        int year;
+        
+        cout << "Book " << i + 1 << " - Title: ";
+        getline(cin, title);
+        cout << "Author: ";
+        getline(cin, author);
+        cout << "Year of Publication: ";
+
+        cin >> year;
+        if(cin.fail()) {
+            cout << "Invalid input. Year must be a number." << endl;
+            --i; // Decrement i to repeat this iteration
+            cin.clear(); // Clear the error flag
+            cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Discard invalid input
+            continue; // Skip to the next iteration
+        }
+
+        library[i] = Book(title, author, year);
+        cin.ignore(); // Clear the newline character from the input buffer
     }
 
     cout << endl << "Library Contents:" << endl;
     for (int i = 0; i < librarySize; ++i) {
         cout << "Book " << i + 1 << ":" << endl;
-        // TODO:
+        library[i].display();
+        cout << "------------------------" << endl;
     }
 
 }

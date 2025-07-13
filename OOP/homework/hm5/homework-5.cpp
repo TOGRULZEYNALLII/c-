@@ -1,5 +1,8 @@
 #include <iostream>
-
+#include <string>
+#include <vector>
+#include "Product.h"
+#include "Order.h"
 using namespace std;
 
 /*
@@ -52,6 +55,9 @@ using namespace std;
 
 
 
+
+
+
 int main() {
 
     system("clear");
@@ -70,7 +76,7 @@ int main() {
     order.addProduct(p3);
 
     // Calculate the order total
-    double total = order.calculateOrderTotal();
+    double total = order.calculateTotal();
 
     // Display the order details
     cout << "Order ID: " << order.getOrderID() << endl;

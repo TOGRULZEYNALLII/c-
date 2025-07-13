@@ -35,6 +35,11 @@ using namespace std;
     Solution 
 */
 class BankAccount {
+    private:
+    int accountNumber;
+    double balance;
+    static int accountCount; // Static variable to keep track of the number of accounts
+
 }
 
 
