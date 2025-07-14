@@ -49,16 +49,74 @@ using namespace std;
 /* 
     Solution 
 */
+#include <iostream>
+using namespace std;
 
+class BankAccount {
+private:
+    int accountNumber;
+    double balance;
 
+public:
+    BankAccount(int accNumber = 0) : accountNumber(accNumber), balance(0.0) {}
+
+    void deposit(double amount) {
+        if (amount < 0) {
+            cout << "Cannot deposit zero or negative amount." << endl;
+            return;
+        }
+        balance += amount;
+    }
+
+    void withdraw(double amount) {
+        if (amount > balance) {
+            cout << "Insufficient funds for withdrawal." << endl;
+            return;
+        }
+        balance -= amount;
+    }
+
+    double getBalance() const {
+        return balance;
+    }
+};
+
+class Bank {
+private:
+    int numAccounts;
+    BankAccount* accounts;
+
+public:
+    Bank(int num) {
+        numAccounts = num;
+        accounts = new BankAccount[num];
+        for (int i = 0; i < numAccounts; ++i) {
+            accounts[i] = BankAccount(i + 1);
+        }
+    }
+
+    ~Bank() {
+        delete[] accounts;
+        cout << "Bank destroyed, memory freed." << endl;
+    }
+
+    void performTransactions() {
+        accounts[0].deposit(1000);
+        accounts[1].deposit(500);
+        accounts[2].deposit(200);
+        accounts[2].withdraw(50);
+    }
+
+    void displayAllBalances() const {
+        for (int i = 0; i < numAccounts; ++i) {
+            cout << "Balance of account " << i + 1 << ": " << accounts[i].getBalance() << endl;
+        }
+    }
+};
 
 int main() {
-
-    /*      Example usage:     */
     Bank bank(3);
-
     bank.performTransactions();
     bank.displayAllBalances();
-
     return 0;
 }

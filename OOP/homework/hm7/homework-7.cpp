@@ -1,4 +1,7 @@
 #include <iostream>
+#include <string>
+#include <cstdlib>
+#include <ctime>
 
 using namespace std;
 
@@ -39,25 +42,58 @@ class BankAccount {
     int accountNumber;
     double balance;
     static int accountCount; // Static variable to keep track of the number of accounts
+    public:
+    BankAccount();
+    BankAccount (const int a){
+        accountNumber=a;
+            balance = 0.0;
+        accountCount++;
+        cout << "Account " << accountNumber << " created. Total accounts: " << accountCount << endl;
+    };
+    double getBalance() {
+        return balance;
+    }
+    void deposit(int x){
+    
+        if(x<0){
+            cout<<"cant deposit zero or <0"<<endl;
 
+        }
+        balance+=x;
+    }
+    ~BankAccount() {
+        accountCount--;
+        if (accountCount == 0) {
+            cout << "All accounts closed." << endl;
+        } else {
+            cout << "Account " << accountNumber << " closed." << endl;
+        }
+    }
+    void withdraw(int amount){
+    if(amount>balance){
+        cout<<"balance out of range !"<<endl;
+
+    }
+    else{
+      balance=  balance-amount;
+    }
 }
 
+};
 
+int BankAccount::accountCount = 0;
 int main() {
 
     /*      Example usage:     */ 
 
-    BankAccount account1(12345); // Account 1 created
-    BankAccount account2(67890); // Account 2 created
+    BankAccount account1(12345); 
+
+    BankAccount account2(67890);
 
     account1.deposit(1000);
     account2.deposit(500);
+     
 
     cout << "Balance of account 1: " << account1.getBalance() << endl;
     cout << "Balance of account 2: " << account2.getBalance() << endl;
-
-    // Account 1 closed (when account1 goes out of scope)
-    // Account 2 closed (when account2 goes out of scope)
-
-    return 0;
 }
