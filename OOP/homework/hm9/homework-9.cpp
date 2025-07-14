@@ -29,7 +29,48 @@ using namespace std;
 /* Solution */
 
 
+class MathOperations {
+private:
+    int result;
 
+public:
+    // Constructor to initialize the result
+    MathOperations(int initial) : result(initial) {}
+
+    // Method to add a value
+    MathOperations* add(int val) {
+        result += val;
+        return this;
+    }
+
+    // Method to subtract a value
+    MathOperations* subtract(int val) {
+        result -= val;
+        return this;
+    }
+
+    // Method to multiply by a value
+    MathOperations* multiply(int val) {
+        result *= val;
+        return this;
+    }
+
+    // Method to divide by a value with zero check
+    MathOperations* divide(int val) {
+        if (val == 0) {
+            cout << "Error: Division by zero is not allowed." << endl;
+            return this; // Return current object without changing result
+        }
+        result /= val;
+        return this;
+    }
+
+    // Method to get the current result
+    int getResult() const {
+        return result;
+    }
+};
+#include <memory>
 
 int main() {
 

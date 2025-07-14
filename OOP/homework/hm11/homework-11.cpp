@@ -25,15 +25,64 @@ using namespace std;
 
 /* Solution */
 struct Student {
-    // Complete the code
+
+
+    public:
+     string name;
+    int rollNumber;
+    int mathMarks;
+    int physicsMarks;
+    int chemistryMarks;
 };
 
 class Classroom {
     private:
-        vector<Student> students;
+    vector<Student> students;
 
     public:
         // Complete the code
+             
+
+    void addStudent(Student student){
+       students.push_back(student);
+    }
+   void displayStudents(){
+
+    for (int i = 0; i < students.size(); i++) {
+      cout << "Name: " << students[i].name << endl;
+      cout << "Roll Number: " << students[i].rollNumber << endl;
+      cout << "Maths Marks: " << students[i].mathMarks << endl;
+      cout << "Physics Marks: " << students[i].physicsMarks << endl;
+      cout << "Chemistry Marks: " << students[i].chemistryMarks << endl;
+      cout << "--------------------------" << endl;
+    }
+
+   }
+
+
+  void displayAverageMarks() {
+    if (students.empty()) {
+        cout << "No students available to calculate average." << endl;
+        return;
+    }
+    int total = 0;
+    for (int i = 0; i < students.size(); i++) {
+        total += students[i].mathMarks + students[i].physicsMarks + students[i].chemistryMarks;
+    }
+    int average = total / (students.size() * 3);
+    cout << "Class average marks (overall): " << average << endl;
+}
+
+
+
+   void displayAveragePerStudent() {
+    for (const auto& student : students) {
+        int total = student.mathMarks + student.physicsMarks + student.chemistryMarks;
+        double avg = total / 3.0;
+        cout << student.name << " (" << student.rollNumber << ") - Average: " << avg << endl;
+    }
+}
+
 };
 
 
@@ -42,17 +91,15 @@ int main() {
 
     /*      Example usage:     */
     Classroom classroom;
-
     int numStudents;
     cout << "Enter the number of students: ";
     cin >> numStudents;
-
     for (int i = 0; i < numStudents; ++i) {
         cout << "Enter details for student " << i + 1 << endl;
 
         Student student;
         cout << "Name: ";
-        cin >> student.name;
+         cin>> student.name;
         cout << "Roll Number: ";
         cin >> student.rollNumber;
         cout << "Maths Marks: ";
@@ -64,7 +111,7 @@ int main() {
 
         classroom.addStudent(student);
         cout << endl;
-    }
+    };
 
     cout << "Details of all students:" << endl;
     classroom.displayStudents();
@@ -72,5 +119,17 @@ int main() {
     cout << "Average marks of each student:" << endl;
     classroom.displayAverageMarks();
     
+    cout << endl;
+
+
+    cout << "Average marks per student:" << endl;
+    classroom.displayAveragePerStudent();
+
+    cout << endl;
+    cout << "Thank you for using the Classroom management system!" << endl;
+
+    // Return 0 to indicate successful execution
+    cout << "Exiting the program." << endl;
+    cout << "Goodbye!" << endl;
     return 0;
 }
